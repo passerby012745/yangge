@@ -1,0 +1,147 @@
+@keyframes moveover {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+html {
+    font-size: 50px;
+}
+
+body {
+    height: 100%;
+    width: 100%;
+    background-color: #f3f3f3;
+}
+
+.lock_img_main_div {
+    position: absolute;
+    width: 100%;
+    height: 50%;
+/ / background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: Center;
+}
+
+.lock_img_main_div_outSide {
+    position: absolute;
+    width: 68%;
+    padding-bottom: 68%;
+    border-radius: 50%;
+    background-color: white;
+
+}
+
+.lock_img_main_div_haveColor {
+    position: absolute;
+    width: 60%;
+    padding-bottom: 60%;
+    border-radius: 50%;
+    animation: moveover 4s linear infinite;
+    background: linear-gradient(to right, pink, white);
+}
+
+.lock_img_main_div_inSide {
+    position: absolute;
+    width: 60%;
+    padding-bottom: 60%;
+    border-radius: 50%;
+    background-color: white;
+}
+
+.lock_img_main_div_inSide {
+    position: absolute;
+    width: 58%;
+    padding-bottom: 58%;
+    background-image: url("../images/lock_normal.png");
+    background-size: 100% 100%;
+    display: flex;
+    justify-content: center;
+    align-items: Center;
+}
+
+.lock_img_main_div_inSide_light {
+    position: absolute;
+    width: 6px;
+    height: 6px;
+    top: 80%;
+    left: 48%;
+    border-radius: 50%;
+    background-color: #007aff;
+}
+
+.lock_desc_div {
+    position: absolute;
+    height: 15%;
+    top: 50%;
+    left: 2%;
+    width: 96%;
+    font-family: PingFang-SC-Medium;
+    color: #333333;
+    display: flex;
+    justify-content: center;
+    align-items: Center;
+}
+
+.lock_desc_Percent {
+    float: left;
+    width: 33%;
+    height: 100%;
+}
+
+.electric_div {
+    float: left;
+    height: 0.8rem;
+    width: 0.3rem;
+    margin-left: 10px;
+    background-color: blue;
+    border-radius: 3px
+}
+.col1_div{
+    position: absolute;
+    top: 62%;
+    left: 3%;
+    width: 96%;
+    height: 17%;
+    font-size: 0.3rem;
+    font-family: PingFang-SC-Medium;
+    color: #333333;
+    display: flex;
+    justify-content: center;
+    align-items: Center;
+}
+.col2_div{
+    position: absolute;
+    top: 82%;
+    left: 3%;
+    width: 96%;
+    height: 17%;
+    font-size: 0.3rem;
+    font-family: PingFang-SC-Medium;
+    color: #333333;
+    display: flex;
+    justify-content: center;
+    align-items: Center;
+}
+
+.col1_left_div{
+    float: left;
+    width: 46%;
+    height: 100%;
+    background-color: #ffffff;
+    border-radius: 0.1rem;
+    display: flex;
+    justify-content: center;
+    align-items: Center;
+}
+
+
+.col1_left_to_right{
+    float: left;
+    width: 4%;
+    height: 100%;
+}

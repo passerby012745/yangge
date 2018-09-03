@@ -1,0 +1,33 @@
+/*selectCss*/
+.selectUl {
+    position: absolute;
+    display: none;
+    top: 0;
+    margin-top: 15%;
+    width: 30%;
+    background: white;
+    z-index: 9999;
+    border-radius: 10px;
+    padding: 0px;
+
+}
+
+.selectUl li {
+    height: 100px;
+    list-style: none;
+    text-indent: 20px;
+    border-bottom: 1px solid #ccc;
+    transition: all .5s ease 0s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.selectUl li:hover {
+    background-color: #88D8FF;
+    border-bottom: 1px solid #88D8FF;
+}
+
+.selectUl li:last-child {
+    border-bottom: 0 none;
+}

@@ -1,0 +1,56 @@
+body {
+    height: 100%;
+    width: 100%;
+    background-color: #f3f3f3;
+}
+
+.time_div {
+    position: absolute;
+    height: 10%;
+    width: 100%;
+    font-size: 30px;
+    background-color: white;
+}
+
+.time_div_next {
+    position: absolute;
+    top: 10.5%;
+    height: 10%;
+    width: 100%;
+    font-size: 30px;
+    background-color: white;
+}
+
+.set_long_div_desc {
+    float: left;
+    width: 48%;
+    margin-left: 2%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.set_long_div_select {
+    float: right;
+    margin-right: 2%;
+    height: 100%;
+    text-align: right;
+    display: flex;
+    align-items: center;
+    flex-direction: row-reverse;
+}
+
+.btn_div{
+    position: absolute;
+    width: 92%;
+    left: 4%;
+    height: 8%;
+    top: 85%;
+    border-radius: 10px;
+    background-color: #0a9dc7;
+    color: white;
+    font-size: 34px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

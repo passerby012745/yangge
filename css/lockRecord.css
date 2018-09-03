@@ -1,0 +1,126 @@
+body {
+    width: 100%;
+    height: 100%;
+    background-color: #f3f3f3;
+}
+
+.daoHang_div {
+    position: absolute;
+    width: 96%;
+    height: 10%;
+    left: 2%;
+    font-size: 30px;
+    color: #4c4c4c;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.select_div {
+    float: left;
+    width: 30%;
+    height: 70%;
+    background-color: white;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.input_div {
+    float: left;
+    width: 46%;
+    height: 70%;
+    margin-left: 2%;
+    border-radius: 10px;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.btn_div {
+    float: left;
+    width: 20%;
+    height: 70%;
+    margin-left: 2%;
+    border-radius: 10px;
+    background-color: #007aff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+input {
+    height: 50px;
+    width: 70%;
+    border: none;
+    font-size: 30px;
+    line-height: 50px;
+}
+
+.msg_div {
+    position: absolute;
+    top: 10%;
+    width: 96%;
+    left: 2%;
+    margin: 0px;
+    padding: 0px;
+    background-color: white;
+}
+
+.msg_div_each {
+    height: 7.5rem;
+    width: 100%;
+    background-color:white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.msg_div_each_time {
+    float: left;
+    width: 20%;
+    height: 100%;
+    font-size: 30px;
+    background-color: white;
+    display:flex;
+    flex-flow: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.msg_div_each_node {
+    float: left;
+    width: 10%;
+    height: 100%;
+    font-size: 30px;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    justify-content: center;
+}
+.msg_div_each_img {
+    float: left;
+    width: 20%;
+    height: 100%;
+    font-size: 30px;
+    display:flex;
+    flex-flow: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.msg_div_each_desc {
+    float: left;
+    width: 50%;
+    height: 100%;
+    font-size: 30px;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+}
+
+

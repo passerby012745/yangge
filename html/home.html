@@ -1,7 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
+    <meta charset="utf-8">
+    <meta name="viewport"
+          content=" user-scalable=no">
     <title>Title</title>
     <link rel="stylesheet" href="../css/home.css">
 </head>
@@ -27,10 +29,10 @@
 <div class="lock_desc_div">
     <div class="lock_desc_Percent">
         <div>
-            <span style="font-size: 1.3rem;">80%</span>
+            <span style="font-size: 1.3rem;" id="powerMsg">80%</span>
         </div>
-        <div style="padding-top: 18px">
-            <div class="electric_div" style="margin-left: 0px"></div>
+        <div style="padding-top: 18px" id="electric">
+            <div class="electric_div"></div>
             <div class="electric_div"></div>
             <div class="electric_div"></div>
             <div class="electric_div"></div>
@@ -44,11 +46,11 @@
     </div>
     <div class="lock_desc_Percent" style="text-align: center">
        <div> <span style="font-size: 1.0rem;">当前状态</span></div>
-        <div> <span style="font-size: 1.2rem;">离线</span></div>
+        <div> <span style="font-size: 1.2rem;color:#0a9dc7">离线</span></div>
     </div>
     <div class="lock_desc_Percent">
-       <div> <span style="font-size: 1.5rem;float: right">20:30</span></div>
-       <div><span style="font-size: 0.6rem;float: right">昨天&nbsp;<span style="color: blue" >上次开锁</span></span></div>
+       <div> <span style="font-size: 1.5rem;float: right" id="time">20:30</span></div>
+       <div><span style="font-size: 0.6rem;float: right" id="locktime">前两天<span style="color: blue" >&nbsp;上次开锁</span></span></div>
     </div>
 </div>
 
@@ -84,6 +86,7 @@
             <div style="text-align: center"><span style="font-size: 1.0rem">开锁详情</span></div>
         </div>
     </div>
+
 </div>
 </body>
 </html>

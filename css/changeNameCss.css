@@ -13,7 +13,7 @@
     position: fixed;
     width: 80%;
     left: 10%;
-    top: 20%;
+    top: 32%;
     margin-left: -0.5rem;
     background: #fff;
     z-index: 999999;
@@ -34,14 +34,13 @@
     font-size: 3rem;
     font-weight: bold;
     color: #111;
-    margin-bottom: 1rem;
-    margin-top: 1rem;
+    margin-bottom: 2rem;
+    margin-top: 3rem;
 }
 
 .haveInput p {
-    margin-top: 0.7rem;
     font-size: 2.5rem;
-    margin-bottom: 2rem;
+    margin-bottom: 4rem;
 }
 
 .inputName {
@@ -51,8 +50,7 @@
     border-radius: 2px;
     -webkit-appearance: none;
     outline: none;
-    font-size: 2rem;
-    margin-bottom: 0.20rem;
+    font-size: 3rem;
 }
 
 .group {

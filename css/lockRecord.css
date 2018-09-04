@@ -85,6 +85,7 @@ input {
     width: 20%;
     height: 100%;
     font-size: 30px;
+    color: #666666;
     background-color: white;
     display:flex;
     flex-flow: column;
@@ -119,7 +120,7 @@ input {
     height: 100%;
     font-size: 30px;
     display:flex;
-    align-items: center;
+    flex-direction: column;
     justify-content: center;
 }
 

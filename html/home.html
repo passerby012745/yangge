@@ -8,6 +8,8 @@
     <link rel="stylesheet" href="../css/home.css">
 </head>
 <body>
+<!--离线-->
+<div class="offLine"></div>
 <!--离线遮罩-->
 <div class="offLine"></div>
 <!--锁背景层-->
@@ -45,48 +47,55 @@
         </div>
     </div>
     <div class="lock_desc_Percent" style="text-align: center">
-       <div> <span style="font-size: 1.0rem;">当前状态</span></div>
-        <div> <span style="font-size: 1.2rem;color:#0a9dc7">离线</span></div>
+       <div style="padding-top: 0.2rem"> <span style="font-size: 0.8rem;" local_key="current_status">当前状态</span></div>
+        <div style="padding-top: 0.2rem"> <span style="font-size: 1.0rem;" id="status">离线</span></div>
     </div>
     <div class="lock_desc_Percent">
        <div> <span style="font-size: 1.5rem;float: right" id="time">20:30</span></div>
-       <div><span style="font-size: 0.6rem;float: right" id="locktime">前两天<span style="color: blue" >&nbsp;上次开锁</span></span></div>
+        <div>
+            <p style="font-size: 0.6rem;float: right;margin: 0px;" >
+                <span id="locktime">前两天</span><span>&nbsp;</span> <span id="status_desc" local_key="open_last">上次开锁</span>
+            </p>
+        </div>
     </div>
 </div>
 
 <div class="col1_div">
-    <div class="col1_left_div">
+    <div class="col1_left_div" onclick="user_control()">
         <div style="text-align: center" >
             <img src="../images/btn_yhgl.png" height="50%">
-            <div style="text-align: center"><span style="font-size: 1.0rem">用户管理</span></div>
+            <div style="text-align: center"><span style="font-size: 1.0rem" local_key="user_control">用户管理</span></div>
         </div>
 
     </div>
     <div class="col1_left_to_right"></div>
-    <div class="col1_left_div">
+    <div class="col1_left_div" onclick="backup_password()">
         <div style="text-align: center" >
             <img src="../images/btn_mmbf.png" height="50%">
-            <div style="text-align: center"><span style="font-size: 1.0rem">密码备份</span></div>
+            <div style="text-align: center"><span style="font-size: 1.0rem" local_key="backup_password">密码备份</span></div>
         </div>
     </div>
 </div>
 
 <div class="col2_div">
-    <div class="col1_left_div">
+    <div class="col1_left_div" onclick="temporary_password()">
         <div style="text-align: center" >
             <img src="../images/btn_lsmm.png" height="50%">
-            <div style="text-align: center"><span style="font-size: 1.0rem">临时密码</span></div>
+            <div style="text-align: center"><span style="font-size: 1.0rem" local_key="temporary_password">临时密码</span></div>
         </div>
 
     </div>
     <div class="col1_left_to_right"></div>
-    <div class="col1_left_div">
+    <div class="col1_left_div" onclick="details_of_the_lock()">
         <div style="text-align: center" >
             <img src="../images/btn_ksxq.png" height="50%">
-            <div style="text-align: center"><span style="font-size: 1.0rem">开锁详情</span></div>
+            <div style="text-align: center"><span style="font-size: 1.0rem" local_key="details_of_the_lock">开锁详情</span></div>
         </div>
     </div>
-
 </div>
+
+<script type="text/javascript" src="../javaScript/jquery.min.js"></script>
+<script type="text/javascript" src="../javaScript/hw_plugin_public.js"></script>
+<script type="text/javascript" src="../javaScript/home.js"></script>
 </body>
 </html>

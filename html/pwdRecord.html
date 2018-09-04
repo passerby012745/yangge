@@ -4,44 +4,49 @@
     <meta charset="UTF-8">
     <title>Title</title>
     <link href="https://cdn.bootcss.com/ionic/1.3.2/css/ionic.css" rel="stylesheet">
-    <script src="https://cdn.bootcss.com/ionic/1.3.2/js/ionic.bundle.min.js"></script>
-    <script src="../javaScript/pwdRecord.js"></script>
     <link rel="stylesheet" href="../css/pwdRecord.css">
 </head>
-
 <body ng-controller="myCtrl">
 <div class="desc_div">
-
-    <span style="font-size: 3.75rem;" id="desc1">1511522#</span>
+    <span style="font-size: 3.75rem;" id="pwd"><!--1511522#--></span>
     <br><br><br><br>
-    <span style="font-size: 30px;" id="desc2">您有一次机会在今天十点之前使用</span>
+    <span style="font-size: 30px;" id="desc1"><!--您有一次机会在今天十点之前使用--></span>
     <br><br>
-    <span style="font-size:30px;" id="desc3">1511522#打开门锁</span>
+    <span style="font-size:30px;" id="desc2"><!--1511522#打开门锁--></span>
     <br><br>
-    <button style="height: 5rem;width: 10rem;border-radius: 10px;background-color: #0c60ee;font-size: 30px;color: white">
-        复制
+    <button id="btn" ng-click="copyPwd()"
+            style="height: 5rem;width: 10rem;border-radius: 10px;font-size: 30px;color: white">
+        <span local_key="copy"><!--复制--></span>
     </button>
 
 </div>
 
 <div class="details_div">
-    <span style="padding-left: 20px">
-       临时密码详情
+    <span style="padding-left: 20px" local_key="details_of_temporary_password">
+      <!-- 临时密码详情-->
     </span>
 </div>
 
 <div class="pwd_list">
     <ion-scroll zooming="true" direction="y" style="width: 100%">
-        <ion-refresher id="fresh1" on-refresh="doRefresh()"></ion-refresher>
-   <div class="pwd_each">
-       <div class="pwd_div">
-           <span style="padding-left: 20px">ssss</span>
-       </div>
-       <div class="time_div" >
-           <span style="padding-right: 20px">ssss</span><span>&nbsp;</span><span>sssss</span>
-       </div>
-   </div>
+        <div id="list">
+            <div class="pwd_each">
+                <div class="pwd_div">
+                    <span style="padding-left: 20px">ssss</span>
+                </div>
+                <div class="time_div">
+                    <span style="padding-right: 20px">ss</span>
+                </div>
+            </div>
+        </div>
     </ion-scroll>
 </div>
+
+
+<script type="text/javascript" src="../javaScript/jquery.min.js"></script>
+<script src="https://cdn.bootcss.com/ionic/1.3.2/js/ionic.bundle.min.js"></script>
+<script type="text/javascript" src="../javaScript/hw_plugin_public.js"></script>
+<script type="text/javascript" src="../javaScript/pwdRecord.js"></script>
+
 </body>
 </html>

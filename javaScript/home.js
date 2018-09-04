@@ -1,7 +1,8 @@
 var pageTitle = null;
-
 var resource = null;
-
+var primaryColor = null;//主色
+var minorColor = null;//次色
+var color = null;
 function getLockSN() {
     var urlObj = getUrlParams(decodeURI(window.location.href));
     return urlObj.sn;
@@ -21,9 +22,6 @@ function initPage() {
     }
 }
 
-function changeAttr() {
-    $('#lockImg').attr('src', '../images/lock-zhengchang.png');
-}
 
 // 加载页面
 function loadpage() {
@@ -135,28 +133,35 @@ function loadpage() {
                     break;
             }
             if ("online" == data.basic.status) {
-                $('#fullBg').css("background", "#2ac4f6");
+               $("#status_desc").css("color",primaryColor);
+                $("#status").html(getResource()["Online"]);
+                $("#status").css("color",primaryColor);
+                $(".lock_img_main_div_haveColor").css("background","linear-gradient(to right,"+primaryColor+", white)")
+                $(".offLine").css("display", "none");
                 if ("lock" == data.doorLock.lockState) {
-                    $('#lockImg').css("background", "url(../images/111.png)");
-                    $('#lockImg').css("background-size", "100% 100%");
+                    $(".lock_img_main_div_inSide_light").css("background-image", "url(../images/lock_normal.png)");
+
                 }
                 if ("unlock" == data.doorLock.lockState) {
-                    $('#lockImg').css("background", "url(../images/333.png)");
-                    $('#lockImg').css("background-size", "100% 100%");
+                    $(".lock_img_main_div_inSide_light").css("background-image", "url(../images/lock_open.png)");
+
                 }
             } else if ("offline" == data.basic.status) {
+                $("#status").css("color","#999999");
+                $("#status_desc").css("color","#999999");
+                $(".offLine").css("display", "block");
+                $("#status").html(getResource()["Offline"]);
+                $(".lock_img_main_div_haveColor").css("background","linear-gradient(to right,#f3f3f3, #f3f3f3)")
 
-                $('#fullBg').css("background", "#999999");
+
             }
-
-
-            document.getElementById("loading").style.display = "none";
-            document.getElementById("page").style.display = "block";
         },
         "error": function (res) {
         }
     });
     //定时刷新
+    $(".lock_img_main_div_haveColor").css("animation","none")
+
     setTimeout(loadpage, 5000);
 }
 
@@ -176,25 +181,25 @@ function openPage(address, pageBar) {
 // 用户管理
 function user_control() {
     pageTitle = getResource()["user_management"];
-    openPage("html/user_list.html", pageTitle);
+    openPage("html/userList.html", pageTitle);
 }
 
 // 临时密码
 function temporary_password() {
     pageTitle = getResource()["temporary_password_setting"];
-    openPage("html/pwdset.html", pageTitle);
+    openPage("html/setPWD.html", pageTitle);
 }
 
 // 密码备份
 function backup_password() {
     pageTitle = getResource()["backup_password"];
-    openPage("html/pwddetails.html", pageTitle);
+    openPage("html/pwdRecord.html", pageTitle);
 }
 
 // 开锁详情
 function details_of_the_lock() {
     pageTitle = getResource()["details_of_the_lock"];
-    openPage("html/msgdetails.html", pageTitle);
+    openPage("html/lockRecord.html", pageTitle);
 }
 
 function sendCurrentTime() {
@@ -246,7 +251,30 @@ function queryBattery() {
 
 }
 
+function iosCallback(colorParam) {
+    color = JSON.parse(colorParam);
+    primaryColor = "#"+color.colorPrimary.substring(2,8);
+    minorColor = "#"+color.colorPrimary2.substring(2,8);
+
+}
+
+
 $(document).ready(function () {
+    var sUserAgent = navigator.userAgent.toLowerCase();
+    if (sUserAgent.indexOf('android') > -1) {
+        //android
+        color = JSON.parse(window.szsbay.getColorConfig());
+        primaryColor = "#"+color.colorPrimary.substring(2,8);
+        minorColor = "#"+color.colorPrimary2.substring(2,8);
+    } else if (sUserAgent.indexOf('iphone') > -1 || sUserAgent.indexOf('ipad') > -1) {
+        //ios
+        color = JSON.parse(window.szsbay.getColorConfig());
+        primaryColor = "#"+color.colorPrimary.substring(2,8);
+        minorColor = "#"+color.colorPrimary2.substring(2,8);
+    } else {
+        //pc
+    }
+
     window.AppJsBridge.service.localeService.getResource({
         "success": function (data) {
             resource = data;

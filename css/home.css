@@ -145,3 +145,14 @@ body {
     width: 4%;
     height: 100%;
 }
+
+
+.offLine {
+    position: absolute;
+    display: none;
+    top: 0rem;
+    width: 100%;
+    height: 100%;
+    opacity: 1;
+    z-index: 9999999;
+}

@@ -9,6 +9,12 @@ function getLockSN() {
     return urlObj.sn;
 }
 
+function getColor() {
+    var urlObj = getUrlParams(decodeURI(window.location.href));
+    return urlObj.primaryColor.replace("/","");
+}
+
+
 function getResource() {
     return resource;
 }
@@ -90,26 +96,9 @@ function createPwd() {
     });
 }
 $(document).ready(function() {
-    var sUserAgent = navigator.userAgent.toLowerCase();
-    if (sUserAgent.indexOf('android') > -1) {
-        //android
-        color = JSON.parse(window.szsbay.getColorConfig());
-        primaryColor = "#"+color.colorPrimary.substring(2,8);
-        minorColor = "#"+color.colorPrimary2.substring(2,8);
+   primaryColor = getColor();
         $("#i1").css("color",primaryColor);
-        $("#i1").css("color",primaryColor);
-        $(".btn_div").css("background-color",primaryColor);
-    } else if (sUserAgent.indexOf('iphone') > -1 || sUserAgent.indexOf('ipad') > -1) {
-        //ios
-        color = JSON.parse(window.szsbay.getColorConfig());
-        primaryColor = "#"+color.colorPrimary.substring(2,8);
-        minorColor = "#"+color.colorPrimary2.substring(2,8);
-        $("#i1").css("color",primaryColor);
-        $("#i1").css("color",primaryColor);
-        $(".btn_div").css("background-color",primaryColor);
-    } else {
-        //pc
-    }
+        $("#i2").css("color",primaryColor); 
     window.AppJsBridge.service.localeService.getResource({
         "success": function(data) {
             resource = data;

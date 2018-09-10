@@ -23,10 +23,18 @@ function getLockSN() {
     var urlObj = getUrlParams(decodeURI(window.location.href));
     return urlObj.sn;
 }
+function getColor() {
+    var urlObj = getUrlParams(decodeURI(window.location.href));
+    return urlObj.primaryColor.replace("/","");
+}
+
 
 //下拉刷新
 function load() {
     queryAllUsedId();
+    primaryColor=getColor();
+    console.log(primaryColor);
+    $(".group").css("color",primaryColor);
     $("#list").empty();
     window.AppJsBridge.service.deviceService.getDevice({
         "sn": getLockSN(),
@@ -61,14 +69,13 @@ function load() {
                     "                    <span id=\"user"+i+"\" style=\"padding-left: 20px\">"+user[i].userName+"</span>\n" +
                     "                </div>\n" +
                     "                <div class=\"type_div\">\n" +
-                    "                    <img style=\"padding-right:20px\" src=\"../images/btn-jinru.png\" height=\"40px\">\n" +
+                    "                    <img style=\"padding-right:20px\" src=\"../images/btn-jinru.png\" height=\"30px\">\n" +
                     "                    <span>&nbsp;</span><span>ID:" + user[i].userNumber+"</span> <span style=\"padding-right:20px;\">"+ user[i].userType+"</span>\n" +
                     "                </div>\n" +
                     "            </div>";
                 ;
                 $("#list").append(text);
             }
-            document.getElementById("loading").style.display = "none";
             // document.getElementById("msg").style.display="block";
         },
         "error": function (res) {
@@ -89,7 +96,7 @@ function changeName(name) {
             "userName": name
         },
         "success": function (res) {
-            $("#span" + i).html(name);
+            $("#span" + changeId).html(name);
             console.log("改名成功");
         },
         "error": function (res) {
@@ -115,7 +122,7 @@ function queryAllUsedId() {
 }
 
 $(document).ready(function () {
-    var sUserAgent = navigator.userAgent.toLowerCase();
+    /*var sUserAgent = navigator.userAgent.toLowerCase();
     if (sUserAgent.indexOf('android') > -1) {
         //android
         color = JSON.parse(window.szsbay.getColorConfig());
@@ -131,7 +138,7 @@ $(document).ready(function () {
         $(".group").css("color",primaryColor);
     } else {
         //pc
-    }
+    }*/
 
     window.AppJsBridge.service.localeService.getResource({
         "success": function (data) {

@@ -134,7 +134,7 @@ function loadpage() {
             }
             if ("online" == data.basic.status) {
                $("#status_desc").css("color",primaryColor);
-                $("#status").html(getResource()["Online"]);
+                $("#status").html(getResource()["online"]);
                 $("#status").css("color",primaryColor);
                 $(".lock_img_main_div_haveColor").css("background","linear-gradient(to right,"+primaryColor+", white)")
                 $(".offLine").css("display", "none");
@@ -150,7 +150,7 @@ function loadpage() {
                 $("#status").css("color","#999999");
                 $("#status_desc").css("color","#999999");
                 $(".offLine").css("display", "block");
-                $("#status").html(getResource()["Offline"]);
+                $("#status").html(getResource()["offline"]);
                 $(".lock_img_main_div_haveColor").css("background","linear-gradient(to right,#f3f3f3, #f3f3f3)")
 
 
@@ -167,7 +167,7 @@ function loadpage() {
 
 //打开页面 address页面地址
 function openPage(address, pageBar) {
-    address = address + "?sn=" + getLockSN();
+    address = address + "?sn=" + getLockSN()+"&primaryColor="+primaryColor;
     window.AppJsBridge.service.applicationService.openURL({
         title: pageBar,
         url: address,
@@ -235,7 +235,6 @@ function queryAllUsedId() {
 }
 
 function queryBattery() {
-
     window.AppJsBridge.service.deviceService.doAction({
         "sn": getLockSN(),
         "deviceClass": "yanggeSmartCivilianDoorLock",
@@ -251,26 +250,18 @@ function queryBattery() {
 
 }
 
-function iosCallback(colorParam) {
-    color = JSON.parse(colorParam);
-    primaryColor = "#"+color.colorPrimary.substring(2,8);
-    minorColor = "#"+color.colorPrimary2.substring(2,8);
-
-}
-
-
 $(document).ready(function () {
     var sUserAgent = navigator.userAgent.toLowerCase();
     if (sUserAgent.indexOf('android') > -1) {
         //android
         color = JSON.parse(window.szsbay.getColorConfig());
-        primaryColor = "#"+color.colorPrimary.substring(2,8);
-        minorColor = "#"+color.colorPrimary2.substring(2,8);
+        primaryColor = "#"+color.colorPrimary.substring(3,9);
+        minorColor = "#"+color.colorPrimary2.substring(3,9);
     } else if (sUserAgent.indexOf('iphone') > -1 || sUserAgent.indexOf('ipad') > -1) {
         //ios
         color = JSON.parse(window.szsbay.getColorConfig());
-        primaryColor = "#"+color.colorPrimary.substring(2,8);
-        minorColor = "#"+color.colorPrimary2.substring(2,8);
+        primaryColor = "#"+color.colorPrimary.substring(3,9);
+        minorColor = "#"+color.colorPrimary2.substring(3,9);
     } else {
         //pc
     }
@@ -291,39 +282,28 @@ $(document).ready(function () {
 
 function electric(j) {
     $("#electric").empty();
-    if (j >= 3) {
+    if (j != 0) {
         for (var i = 1; i <= 10; i++) {
             if (i <= j) {
-                var text = "<div class=\"electric_div\"></div>";
+            	 var text = "<div class=\"electric_div\" style='background-color:"+primaryColor+";'></div>";
                 $("#electric").append(text);
             } else {
-                var text = "<div class=\"electric_div\"></div>";
-                $("#electric").empty(text);
+                var text = "<div class=\"electric_div\" style='background-color:red;'></div>";
+                $("#electric").append(text);
             }
 
         }
     }
 
-    if (j < 3 && j > 0) {
-        for (var i = 1; i <= 10; i++) {
-            if (i <= j) {
-                var text = "<div class=\"electric_div\"></div>";
-                $("#electric").append(text);
-            } else {
-                var text = "<div class=\"electric_div\"></div>";
-                $("#electric").empty(text);
-            }
-
-        }
-    }
+ 
 
     if (j == 0) {
-        if (j < 3 && j > 0) {
+       
             for (var i = 1; i <= 10; i++) {
-                var text = "<div class=\"electric_div\"></div>";
+                var text = "<div class=\"electric_div\" style='background-color:#f3f3f3;'></div>";
                 $("#electric").append(text);
             }
-        }
+        
     }
 }
 

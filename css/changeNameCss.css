@@ -14,7 +14,6 @@
     width: 80%;
     left: 10%;
     top: 32%;
-    margin-left: -0.5rem;
     background: #fff;
     z-index: 999999;
     border-radius: 5px;
@@ -31,32 +30,31 @@
 }
 
 .haveInput h3 {
-    font-size: 3rem;
+    font-size: 25px;
     font-weight: bold;
     color: #111;
-    margin-bottom: 2rem;
-    margin-top: 3rem;
+    margin-top: 20px;
 }
 
 .haveInput p {
-    font-size: 2.5rem;
-    margin-bottom: 4rem;
+    font-size:20px;
+    margin-bottom: 20px;
 }
 
 .inputName {
     width: 84%;
-    height: 4rem;
+    height: 30px;
     border: #B5B5B5 solid 1px;
     border-radius: 2px;
     -webkit-appearance: none;
     outline: none;
-    font-size: 3rem;
+    font-size: 20px;
 }
 
 .group {
-    font-size: 2rem;
+    font-size: 25px;
     border-top: #B5B5B5 solid 1px;
-    height: 6.00rem;
+    height:50px;
     color: #189dff;
 }
 
@@ -65,7 +63,7 @@
     -webkit-tap-highlight-color: rgba(0, 0, 0, 0.1);
     width: 49.8%;
     float: left;
-    line-height: 6.00rem;
+    line-height: 50px;
 
 }
 

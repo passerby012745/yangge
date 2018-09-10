@@ -1,0 +1,379 @@
+@charset "utf-8";
+/* CSS Document */
+
+
+*{margin:0;padding:0;}
+body{font-family:"微软雅黑",Verdana, Geneva, sans-serif,Arial;width:100%; max-width:640px;text-align:left; margin:0 auto; background:#fff; font-size:12px; }
+ul,li{list-style-type:none;}
+img{border:0; width:100%;  margin:0 auto;}
+a{ text-decoration:none;}
+h2,h3,h4,h5,b{ font-weight:normal;}
+input{ height:32px;}
+.clear{  height:1px; display:inline; float:left; width:100%;}
+em,i{ font-weight:normal; font-style:normal;}
+/*css*/
+/*头部*/
+.top{ display:inline; float:left; width:100%; position:fixed; left:0; top:0; height:50px; line-height:50px; background:#00b4e6; color:#fff; text-align:center; font-size:14px;}
+.top em{ display:inline; float:left;}
+.top em a img{ width:14px;  height:25px; display:inline; float:left; margin-top:12px; margin-left:20px;}
+.margin50{ display:inline; float:left; width:100%; height:50px; line-height:50px;}
+/*内容区域*/
+/*报警*/
+.pic{ display:inline; float:left; width:100%; margin:0 auto; text-align:center; margin-top:30px;}
+.pic img{ width:140px; height:140px; margin:0 auto;}
+.mutilthree table{margin:0 auto;width:100%;}
+.mutilthree{ display:inline; width:100%; margin:0 auto; text-align:center; margin-top:30px;}
+.mutilthree img{ width:110px; height:110px; margin:0 auto;}
+.backgroud img{ width:100%; height:auto; margin:0 auto;}
+.backgroud strong{ font-size:20px;line-height:20pt;}
+.backgroud p{ font-size:20px;line-height:20pt;margin-left:10px;margin-right:10px;}
+.sn_ieee{ display:inline; float:left; width:100%; text-align:center; color:#898787; margin-top:5px; margin-bottom:20px; padding-bottom:5px;}
+.div_body_text{ display:inline; float:left; width:100%; text-align:center; color:#898787; margin-top:5px; margin-bottom:20px; padding-bottom:5px;}
+.input_ok{ display:inline; float:left; width:100%; margin-top:20px; margin-bottom:20px;}
+.input_ok input{ display:inline; float:left; background:#e7e6e6; width:70%; margin-left:30px; border:0; height:40px; line-height:40px; text-indent:5px;}
+.input_ok a{ background:#00b4e6; display:inline; float:left; border-radius:15px; color:#fff; text-align:center; padding:10px; margin-left:5px;}
+.alarmpic{ display:inline; float:left; width:100%;}
+.alarmpic b{ display:inline; float:left; width:96%; margin-left:2%;}
+.alarmpic b img{ margin-bottom:10px;}
+.alarmpic b a{ color:#999999; display:inline; float:left; width:60px; height:60px; margin-left:12%; text-align:center;} 
+.alarmpic b em{ display:inline; float:left; margin-top:40px; width:90%; margin-left:10%; margin-bottom:50px;}
+.alarmpic b em a{ display:inline; float:left; margin-left:16%;}
+.alarmpic a:active{ background:#0096bf;border-radius:30px;}
+.alarmpic em i img{ width:60px; height:60px;margin-bottom:10px;}
+
+/*******1*******以下是声光报警器的停止按键-通用#00b4e6 -- 联通#fd7f06 */
+.btn a{ display:inline; float:left; width:80%; margin-left:9%; background:#00b4e6; border-radius:8px; text-align:center; color:#fff; padding:8px 0; margin-bottom:30px;}
+.btn a:active{ background:#0096bf;}/*通用 #0096bf --联通  #c7690f */
+
+
+
+/*开关*/
+.kg_ul{ display:inline; float:left; width:100%; margin-bottom:30px;}
+.kg_ul li{ display:inline; float:left; width:100%; border-top:1px solid #c4c4c4; padding:10px 0;}
+.kg_ul li strong{ display:inline; float:left; text-align:left; color:#2e2e2e; margin-left:10%; margin-top:5px; font-weight:normal;}
+.kg_ul li b{ display:inline; float:right; text-align:center; color:#2e2e2e; margin-left:30%;margin-top:5px;}
+.float_left{float:left!important;margin-left:42%!important;}
+.kg_ul li i{ display:inline; float:right; text-align:center; margin-right:11%;margin-top:5px;}
+.kg_ul li strong img{ width:20px; display:inline; float:left; margin-top:-8px; margin-right:5px;}
+.kg_ul li em{ display:inline; float:right; margin-right:11%; color:#2e2e2e;}
+.kg_ul li em img{ width:42px; height:20px;}
+.kg_ul li .erro_active{color:red;}
+
+.kg_z825{  display:inline; float:left; width:100%; margin-bottom:30px;visibility:hidden;}
+.kg_z825 li{ display:inline; float:left; width:100%; border-top:1px solid #c4c4c4; padding:10px 0;}
+.kg_z825 li strong{ display:inline; float:left; text-align:left; color:#2e2e2e; margin-left:10%; margin-top:5px; font-weight:normal;}
+.kg_z825 li b{ display:inline; float:right; text-align:center; color:#2e2e2e; margin-left:30%;margin-top:5px;}
+.kg_z825 li i{ display:inline; float:right; text-align:center;margin-right:11%;margin-top:5px;}
+
+.table_temp{width:100%;margin-bottom:30px;line-height:35px;height:35px;}
+.table_temp img{width: 20px;margin-left: 5px;float:left;margin-right:5px}
+.table_temp p{float:left;}
+/******2**************以下是普通开关的按键-通用#00b4e6 -- 联通#fd7f06 */
+.btn_kg{ display:inline; float:left; width:90%; margin-left:5%;}
+.btn_kg a{ display:inline; float:left; width:45%; background:#00b4e6;background-size:100%; padding:10px 0; border-radius:10px; margin-right:2.5%; margin-left:2.5%; text-align:center; color:#fff; margin-bottom:30px;}
+.btn_kg a:active{ background:#0096bf;}/*通用 #0096bf --联通 #c7690f */
+
+.btn_kg1{ display:inline; float:left; width:90%; margin-left:5%;}
+.btn_kg1 a{ display:inline; float:left; width:45%; background:#00b4e6; padding:10px 0; border-radius:10px; margin-left:25%; text-align:center; color:#fff; margin-bottom:30px;}
+.btn_kg1 a:active{ background:#0096bf;}
+
+.btn_t{ display:inline; width:90%;}
+.btn_t a{ display:inline; float:right; width:45%; background:#00b4e6; padding:10px 0; border-radius:10px; margin-right:5%; text-align:center; color:#fff; margin-bottom:30px;}
+
+
+
+/**窗帘*/
+.curtain_btn{ display:inline; width:100%; margin:0 auto; text-align:center; margin-top:30px;}
+.curtain_btn table{margin:0 auto;width:100%;}
+/*****3*************以下是窗帘的按键-通用#00b4e6 -- 联通#fd7f06 */
+.curtain_btn a{ display:inline; float:left; width:100%; background:#00b4e6; background-size:100%;padding:10px 0; border-radius:10px;/* margin-right:2.5%; margin-left:2.5%;*/ text-align:center; color:#fff; margin-bottom:30px;}
+.curtain_btn a:active{ background:#0096bf;}/*通用0096bf*--联通c7690f*/
+.curtain_btn span{line-height:10px;height:10px;}
+.curtain_btn td{width:33.3%}
+
+
+
+
+
+/*多键开关*/
+.kg_ul1{ display:inline; float:left; width:90%; margin-bottom:30px;margin:0 5%}
+.kg_ul1 td{padding:0px 20px 5px 0;}
+.kg_ul1 td b{margin: 0 5px;}
+.kg_ul1 li{ display:inline; float:left; width:100%; padding:10px 0;}
+.kg_ul1 li  span{padding:0 0px;}
+.kg_ul1 li strong{ display:inline; float:left; text-align:left; color:#2e2e2e; margin-top:5px; font-weight:normal;font-size:18px;}
+
+.btn_kg1{ display:inline; float:left; width:90%; margin-left:5%;}
+.btn_kg1 a{ display:inline; float:left; width:45%; background:#00b4e6; padding:10px 0; border-radius:10px; margin-left:25%; text-align:center; color:#fff; margin-bottom:30px;}
+.btn_kg1 a{ display:inline; float:left; width:45%; background:#00b4e6; padding:10px 0; border-radius:10px; margin-left:25%; text-align:center; color:#fff; margin-bottom:30px;}
+.btn_kg1 a:active{ background:#0096bf;}
+.kg_ul1 li strong img{ width:20px; display:inline; float:left; margin-top:-8px; margin-right:5px;}
+.kg_ul1 li em{ display:inline; float:right; color:#2e2e2e;}
+.kg_ul1 li em img{ width:42px; height:20px;}
+
+/*弹出窗口*/
+.mask{ background:#000; opacity:0.7;filter:Alpha(opacity=70); width:100%; height:120%; position:absolute; top:0; left:0; z-index:99; display:none;}
+.mask_pop{  width:90%;background:#fff; border-radius:4px; display:inline; float:left; z-index:101; position:absolute; top:0; left:0;display:none;}
+
+ .installguide{ display:inline; width:100%; text-align:left;font-size:16px;}
+ 
+.txtitle{ display:inline; float:left; width:100%; text-align:center; color:#222121; font-size:14px; padding:10px 0; border-bottom:1px solid #5e5e5e;}
+.gz_p{ display:inline; float:left; width:100%; margin:20px auto; text-align:center;color:#222121;}
+.gz_ok{ display:inline; float:left; width:100%; margin-bottom:20px;}
+.gz_ok a{ color:#adb0b1; border:1px solid #adb0b1; border-radius:4px; width:30%; margin-left:15%; display:inline; float:left; text-align:center; padding:5px 0;}
+.gz_ok  .ok_active{ color:#00b4e6;border:1px solid #00b4e6;}
+
+.gz_ok_success{ display:inline; float:left; width:100%; margin-bottom:20px;}
+.gz_ok_success a{ color:#adb0b1; border:1px solid #adb0b1; border-radius:4px; width:30%; margin-left:35%; display:inline; float:left; text-align:center; padding:5px 0;}
+.gz_ok_success  .ok_active{ color:#00b4e6;border:1px solid #00b4e6;}
+
+/*****4*************通用#00b4e6 -- 联通#fd7f06 */
+/*清除按钮的样式*/
+.clear_fail{ display:inline; float:left; width:100%; margin-bottom:20px;}
+.clear_fail a{ color:#adb0b1; border:1px solid #adb0b1; border-radius:4px; width:13%; margin-left:23%; display:inline; float:left; text-align:center; padding:5px 0;}
+.clear_fail  .ok_active{ color:#00b4e6;border:1px solid #00b4e6;}
+
+#nopower{visibility:hidden;}
+/*swiper滑动*/
+.swiper-container {
+        width: 100%;
+        height: 100%;
+        margin-left: auto;
+        margin-right: auto;
+}
+.swiper-slide {
+        text-align: center;
+        font-size: 18px;
+        background: #fff;
+        /* Center slide text vertically */
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: -webkit-flex;
+        display: flex;
+		display:block;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        -webkit-justify-content: center;
+        justify-content: center;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        -webkit-align-items: center;
+        align-items: center;
+}
+/*机顶盒*/
+.box_page{ display:inline; float:left; width:90%; border:1px solid #959494; border-radius:20px; margin:20px auto; margin-left:5%;}
+.box_btnT{ display:inline; float:left; width:100%; margin:20px auto;}
+.box_btnT em{ display:block; width:100%; margin:0 auto;}
+.box_btnT i{ width:33%; display:inline; float:left;}
+.box_btnT i img{ width:60px; height:60px;}
+.box_btnT i img:active{ border-radius:30px;background:#0096bf;}
+.box_btnT i label{width:60px; height:60px;display:inline; float:left;}
+
+.keydown_ul{ display:inline; float:left; width:100%; margin-bottom:15px;}
+.keydown_ul em{display:block; width:100%; margin:0 auto;}
+.keydown_ul li{ display:inline; float:left; width:100%; margin-bottom:20px;}
+.keydown_ul li i{ width:33%; display:inline; float:left;}
+.keydown_ul li i img{ width:60px; height:41px;}
+.keydown_ul li i img:active{ width:60px; height:41px;background:#0096bf;}
+
+.view{ display:inline; float:left; width:100%; position:relative; margin:0 auto; text-align:center;}
+.view b{ display:block; width:120px;margin:0 auto;}
+.view b a{ display:inline; float:left;}
+.view b i{display:inline; float:left; width:100%;}
+.view b .view_left img{ width:26px; height:60px;}
+.view b .view_left img:active{ width:26px; height:60px;background:#0096bf;}
+.view b .view_right img{ width:26px; height:60px;}
+.view b .view_right img:active{ width:26px; height:60px;background:#0096bf;}
+.view b .view_top img{ width:60px; height:26px; margin-left:25px;}
+.view b .view_top img:active{ width:60px; height:26px; margin-left:25px;background:#0096bf;}
+.view b .view_bottom img{ width:60px; height:26px;margin-left:25px;}
+.view b .view_bottom img:active{ width:60px; height:26px;margin-left:25px;background:#0096bf;}
+.view b .view_mid{  margin-left:10px; margin-right:10px;}
+.view b .view_mid img{ width:40px; height:40px; margin-top:10px;}
+.view b .view_mid img:active{border-radius:30px;background:#0096bf;}
+.view b label{ display:inline; float:left; height:21px;}
+
+.menu_bottom{ display:inline; float:left; width:100%; margin-bottom:20px; margin-top:20px;}
+.menu_bottom img{width:60px; height:41px;}
+.menu_bottom img:active{width:60px; height:41px;background:#0096bf;}
+.menu_bottom i{ width:33%; display:inline; float:left;}
+.menu_bottom i span:active{ width:60px; height:41px;background:#0096bf;}
+.menu_bottom i label{width:60px; height:41px; display:inline; float:left;}
+.menu_bottom span{display:block;text-align:center;color:#ffffff;line-height:41px; width:60px; height:41px;}
+.menu_bottom i div{ margin-left:20px; width:60px; height:41px; background:url(../../InfraredRepeater/image/bgab.png); background-size:cover;}
+
+.box_btnT em .kt_tleft { display:inline; float:left; margin-left:20px;}
+.box_btnT em .kt_tright {display:inline; float:right; margin-right:20px;}
+
+.kt_bottom{ margin-top:50px;}
+
+
+/*usb插件*/
+.line{ border-bottom:1px solid #c4c4c4; display:inline; float:left; width:100%; height:1px; margin:5px 0 30px 0;}
+/*模式*/
+.mode{ display:inline; float:left; width:100%;border-bottom:1px solid #c4c4c4; padding-bottom:20px;}
+.mode strong{ display:inline; float:left; margin-left:20px; width:100px; font-weight:normal;}
+.mode em{ display:inline; float:right; margin-right:10px; width:100px; text-align:center;}
+.mode i img{ display:inline; float:right; margin-right:10%; width:11px; height:20px;}
+.mode_p{ display:inline; float:left; width:100%;}
+.mode_p b{ display:inline; float:left; width:100%;border-bottom:1px solid #575757; padding:10px 0; text-align:left; text-indent:30px;/* background:url(../images/modecheck.png) no-repeat 90% center;*/}
+
+/*可调光css*/
+.light_line{ display:inline; float:left; width:100%; padding:10px 0;border-top:1px solid #c4c4c4;border-bottom:1px solid #c4c4c4; margin-bottom:20px;  }
+/*为了解决数字无法对齐，采用绝对定位方法  722*/
+
+#power{ position:absolute;left:100px;}
+#current{ position:absolute;left:100px;}
+#energy{ position:absolute;left:100px;}
+#voltage{ position:absolute;left:100px;}
+
+#mutilpower{ left:100px;}
+#mutilcurrent{ left:100px;}
+#mutilenergy{ left:100px;}
+#mutilvoltage{ left:100px;}
+.spanright{border-right:1px solid #c4c4c4;}
+
+
+.demo {
+  padding: 203px 10% 13%; }
+ 
+  /* line 459, ../sass/app.scss */
+  .demo #control-hint {
+    margin: 0 auto; }
+    /* line 461, ../sass/app.scss */
+    .demo #control-hint p {
+      background: #2c3e50;
+      color: white;
+      margin: 0 auto;
+      padding: 15px 0;
+      position: relative;
+      text-align: center;
+      width: 45%;
+      z-index: 5;
+      -webkit-border-radius: 50px;
+      -moz-border-radius: 50px;
+      -ms-border-radius: 50px;
+      -o-border-radius: 50px;
+      border-radius: 50px; }
+    /* line 472, ../sass/app.scss */
+    .demo #control-hint #hint-triangle {
+      border-bottom: 20px solid #2c3e50;
+      border-left: 20px solid transparent;
+      border-right: 20px solid transparent;
+      height: 0;
+      left: 2px;
+      margin: 2% auto 0;
+      position: relative;
+      width: 0;
+      z-index: 2; }
+  /* line 484, ../sass/app.scss */
+  .demo #demo-control {
+    background: #fff;
+    cursor: ew-resize;
+    height: 15px;
+    margin: 4% 0 0;
+    position: relative;
+    text-align: left;
+    width:300px;
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    -ms-border-radius: 8px;
+    -o-border-radius: 8px;
+    border-radius: 8px; }
+	.demo #demo-control1 {
+    background: #fff;
+    cursor: ew-resize;
+    height: 15px;
+    margin: 4% 0 0;
+    position: relative;
+    text-align: left;
+    width:300px;
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    -ms-border-radius: 8px;
+    -o-border-radius: 8px;
+    border-radius: 8px; }
+	.demo #demo-control .ui-slider-range {
+    background: #000;
+    cursor: ew-resize;
+    height: 15px;
+    margin: 4% 0 0;
+    position: relative;
+    text-align: left;
+    width:300px;
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    -ms-border-radius: 8px;
+    -o-border-radius: 8px;
+    border-radius: 8px; }
+    /* line 493, ../sass/app.scss */
+    .demo #demo-control .ui-slider-handle {
+      background: #dedede;
+      cursor: ew-resize;
+      height: 31px;
+      top: -8px;
+      margin-left: -15px;
+      outline: none;
+      position: absolute;
+      width: 31px;
+      z-index: 2;
+      -webkit-border-radius: 50%;
+      -moz-border-radius: 50%;
+      -ms-border-radius: 50%;
+      -o-border-radius: 50%;
+      border-radius: 50%; }
+  /* line 506, ../sass/app.scss */
+  .demo #demo-wrap {
+    background: white;
+    height: 400px;
+    margin: 0 auto;
+    overflow: hidden;
+    position: relative;
+    width: 60%;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+    border-radius: 5px; }
+    /* line 514, ../sass/app.scss */
+    .demo #demo-wrap a {
+      color: #19bc9c; }
+      /* line 516, ../sass/app.scss */
+      .demo #demo-wrap a:hover {
+        color: #1cd3af; }
+      /* line 519, ../sass/app.scss */
+      .demo #demo-wrap a:active {
+        color: #16a589; }
+    /* line 523, ../sass/app.scss */
+    .demo #demo-wrap .demo-article {
+      height: 327px;
+      margin-top: 73px;
+      overflow: auto;
+      padding: 15px 7% 30px; }
+    /* line 531, ../sass/app.scss */
+    .demo #demo-wrap #browser-nav,
+    .demo #demo-wrap #browser-tools,
+    .demo #demo-wrap #browser-top {
+      position: absolute; }
+    /* line 535, ../sass/app.scss */
+    .demo #demo-wrap #browser-nav,
+    .demo #demo-wrap #browser-tools {
+      z-index: 99; }
+    /* line 538, ../sass/app.scss */
+    .demo #demo-wrap #browser-nav {
+      height: 72px;
+      left: 0;
+      top: 0;
+      width: 180px; }
+    /* line 544, ../sass/app.scss */
+    .demo #demo-wrap #browser-tools {
+      height: 72px;
+      right: 0;
+      top: 0;
+      width: 37px; }
+    /* line 550, ../sass/app.scss */
+    .demo #demo-wrap #browser-top {
+      height: 72px;
+      top: 0;
+      width: 100%;
+      z-index: 90; }
